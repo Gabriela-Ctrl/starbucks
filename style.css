@@ -1,5 +1,6 @@
 /*Importando a fonte poppins (Google Fonts)*/
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600;800&display=swap');
+
 
 
 *{
@@ -57,4 +58,125 @@ header .logo:hover{
 header ul{
     position: relative;
     display: flex; /*poe os links em linha*/
+}
+
+header ul li{
+    list-style: none; /*tira a bolinha*/
+
+}
+
+header ul li a{
+    display: inline-block; /*Garante que o link fique sempre em linha*/
+    color: var(--corSecundaria);
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 40px;
+ }
+ header ul li a:hover{
+    background-color: var(--corPrimaria);
+    border-radius: 10px;
+    color: var(--corTerciaria);
+ }
+
+ /*_____________________________________________________________________________________________________________________*/
+ .conteudo{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+ }
+
+ .conteudo .frase{
+    position: relative;
+    max-width: 600px; /* Largura area de texto */
+
+ }
+
+ .conteudo .frase h2{
+    color: var(--corSecundaria);
+    font-size: 2.5em;
+    line-height: 1.5em;
+    font-weight: 400;
+ }
+
+ .conteudo .frase h2 span
+{
+    color: var(--corPrimaria);
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.conteudo .frase p{
+    color: var(--corSecundaria);
+}
+
+.botao{
+    display: inline-block;
+    margin-top: 20px;
+    background-color: var(--corPrimaria);
+    border-radius: 20px;
+    color: var(--corTerciaria);
+    padding: 4px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-decoration-line: none;
+    
+}
+
+.botao:hover{
+    background-color: var(--corSecundaria);
+    color: var(--corTerciaria);
+}
+
+.conteudo .imgBox{
+    width: 600px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+}
+
+.conteudo .imgBox img{
+    max-width: 340px;
+
+}
+
+.sorvetes{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%); /*Compensa o ajuste centralizando*/
+    display: flex;
+    
+}
+
+.sorvetes li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer; /*Transforma o cursor em uma mão*/
+    transition: 0.5s; /*tempo de transição*/
+}
+
+.sorvetes li:hover{
+    transform: translateY(-15px); /*Movimenta 15 no eixo x);*/
+
+}
+
+.sorvetes li img{
+    max-width: 60px;
+}
+
+main ul{
+    list-style: none;
+}
+
+main li a{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    /* filter: invert(1); */
 }
