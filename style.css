@@ -1,7 +1,7 @@
-/*Importando a fonte poppins (Google Fonts)*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;600;800&display=swap');
-
-
+/*Importando a font Poppins (Google Fontes)*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600;900&display=swap');
+/* _________________________________________________________________________________________________ */
+/* Reset (básico) */
 
 *{
     margin: 0;
@@ -9,32 +9,31 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
-html{
-    /*variaveis em CSS*/
+html {
+    /* Variáveis em CSS */
 
     --corPrimaria: #017143;
 
     --corSecundaria: #333;
 
-    --corTerciaria: #fff;  
+    --corTerciaria: #fff;
+
 }
-
-
-
+/* _________________________________________________________________________________________________ */
+/* Main */
 main{
     position: relative;
     width: 100%;
-    min-height: 100vh; /*altura de uma tela*/;
+    min-height: 100vh; /*Altura 1 tela (view height)*/
     padding: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--corTerciaria);
-
+    background-color: var(--corTerciaria);/*Chamada de variável*/
 }
-
-header{
+/* _________________________________________________________________________________________________ */
+/* Header */
+header {
     position: absolute;
     top: 0;
     left: 0;
@@ -43,94 +42,83 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
 }
-
 header .logo{
     position: relative;
     max-width: 80px;
 }
-
 header .logo:hover{
-    filter: invert(0.1);
+    filter: invert(0.1); /*Controla o nível de contraste*/
 }
+
 header ul{
     position: relative;
-    display: flex; /*poe os links em linha*/
+    display: flex; /*Põe os links em linha (Menu)*/
 }
 
 header ul li{
-    list-style: none; /*tira a bolinha*/
-
+    list-style: none;/*Remove estilo  da lista (Bolinha)*/
 }
-
-header ul li a{
-    display: inline-block; /*Garante que o link fique sempre em linha*/
+header ul a{
+    display: inline-block;/*Garante que o link fique sempre em linha*/
     color: var(--corSecundaria);
     font-size: 20px;
     font-weight: 300;
     text-decoration: none;
     padding: 5px;
     margin-left: 40px;
- }
- header ul li a:hover{
-    background-color: var(--corPrimaria);
-    border-radius: 10px;
+}
+header ul a:hover{
     color: var(--corTerciaria);
- }
+    background-color: #017143;
+    border-radius: 10px;
+}
 
- /*_____________________________________________________________________________________________________________________*/
- .conteudo{
+/* _________________________________________________________________________________________________ */
+/* Conteúdo */
+.conteudo{
     position: relative;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
- }
-
- .conteudo .frase{
+    align-items: center;
+}
+.conteudo .textoPrincipal{
     position: relative;
-    max-width: 600px; /* Largura area de texto */
-
- }
-
- .conteudo .frase h2{
+    max-width: 600px; /*Largura área de texto*/
+}
+.conteudo .textoPrincipal h1{
     color: var(--corSecundaria);
-    font-size: 2.5em;
-    line-height: 1.5em;
+    font-size: 2.5em;/* 1em= 1 x tamanho fonte elemento (16px)*/
+    line-height: 1.5em; /*Espaçamento vertical*/
     font-weight: 400;
- }
-
- .conteudo .frase h2 span
-{
+}
+.conteudo .textoPrincipal h1 span {
     color: var(--corPrimaria);
     font-size: 1.2em;
     font-weight: 900;
 }
-
-.conteudo .frase p{
-    color: var(--corSecundaria);
+.conteudo .textoPrincipal p{
+    color:var(--corSecundaria)
 }
-
-.botao{
+.conteudo .textoPrincipal a{
     display: inline-block;
     margin-top: 20px;
     background-color: var(--corPrimaria);
-    border-radius: 20px;
     color: var(--corTerciaria);
-    padding: 4px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-decoration-line: none;
-    
-}
-
-.botao:hover{
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight:600;
+    padding: 8px 20px;
+    letter-spacing: 1px; /*Espaço entre os caracteres*/
+    text-decoration-line: none; 
+} 
+.conteudo .textoPrincipal a:hover{
     background-color: var(--corSecundaria);
     color: var(--corTerciaria);
 }
-
+/* _________________________________________________________________________________________________ */
+/*Milkshake*/
 .conteudo .imgBox{
     width: 600px;
     display: flex;
@@ -138,45 +126,188 @@ header ul li a{
     padding-right: 50px;
     margin-top: 50px;
 }
-
 .conteudo .imgBox img{
     max-width: 340px;
-
 }
-
-.sorvetes{
+.milkshakes{
     position: absolute;
     left: 50%;
     bottom: 20px;
-    transform: translate(-50%); /*Compensa o ajuste centralizando*/
+    transform: translate(-50%);/*Compensa o ajuste centralizando*/
     display: flex;
-    
 }
-
-.sorvetes li{
+.milkshakes li{
     list-style: none;
     display: inline-block;
     margin: 0 20px;
-    cursor: pointer; /*Transforma o cursor em uma mão*/
-    transition: 0.5s; /*tempo de transição*/
+    cursor: pointer; /*Transforma o cursor em uma*/
+    transition: 0.5s;/*Tempo de transição*/
 }
-
-.sorvetes li:hover{
-    transform: translateY(-15px); /*Movimenta 15 no eixo x);*/
-
+.milkshakes li:hover{
+    transform: translateY(-15px);/*Movimenta 15 no eixo x*/
 }
-
-.sorvetes li img{
+.milkshakes li img{
     max-width: 60px;
 }
 
-main ul{
+/* Imagem das redes sociais */
+.sociais{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sociais li {
     list-style: none;
 }
 
-main li a{
+.sociais li a {
     display: inline-block;
     margin: 5px 0;
-    transform: scale(0.6);
-    /* filter: invert(1); */
+    transform: scale(0.6); /*Reduz o tamanho dos ícones*/
+    filter: invert(1); /*Inverte a cor para branco*/
+}
+
+.sociais li a:hover {
+    /* color:333; */
+    color: var(--corSecundaria);
+    filter: invert(0);
+}
+
+/*_________________________________________________________________________________________________ */
+/*Milkshake*/
+
+.circulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--corPrimaria);
+
+    /* https://bennettfeely.com/clippy */
+    /* https://www.w3schools.com/cssre/css3_pr_clip-path.php */
+
+    /* Tamanho -> Lado-> posição */
+    clip-path: circle(600px at right 800px);
+}
+.circulo class{
+    position: absolute;
+    font-size: 20px; 
+}
+
+/*_________________________________________________________________________________________________ */
+/* Responsividade */
+
+/* https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
+/* Small devices (600px and up) */
+/* Medium devices (768px and up) */
+/* Large devices (992px and up) */
+/* Extra large devices (1700px and up) */
+
+/* Abaixo de 992px */
+@media (max-width: 992px){
+    header{
+        padding: 20px;
+    }
+
+    header .logo{
+        max-width: 60px; /* Era 80px e agora vira 60px(Reduz)*/
+    }
+
+    header ul{
+        display: none;/*Esconde o menu abaixo de 992px*/
+    }
+
+    /* Menu hambuerguer */
+    .toggle {
+       position: relative;
+       width: 30px;
+       height: 30px;
+       cursor: pointer;
+       background: url(assets/menu.png); /*Imagem do hamburguer*/
+       background-size: 30px;
+       background-position: center;
+       background-repeat: no-repeat;
+       filter: invert(1);
+       z-index: 11;
+    }
+
+    .toggle.active {
+        position: fixed;
+        right: 20px;
+        background: url(assets/close.png); /*Imagem do X (Fechar)*/
+        background-size: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+    /* Menu hambruguer ativado (forma a lista) */
+    header ul.links.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #f2f2f2;
+        z-index: 10;
+    }
+
+    header ul li a {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+
+    /* Neste ponto fazer JS (1ª função)*/
+
+    /* Conteúdo */
+    main{
+        padding: 20px 20px 120px;
+    }
+
+    .conteudo{
+        flex-direction: column;
+        margin-top:100px ;
+    }
+
+    .conteudo .textoPrincipal h2{
+        font-size: 2.5em;
+        margin-bottom: 15px;
+    }
+
+    .conteudo .textoPrincipal{
+        max-width: 100%;
+    }
+
+    .conteudo .imgBox{
+        max-width: 300px;
+    }
+
+    .thumb li img{
+        max-width: 40px;
+    }
+
+    .circulo{
+        clip-path: circle(400px at center bottom);
+    }
+
+    .sociais{
+        /* Estiliza os sociais */
+        /* background #017143 */
+        background: var(--corPrimaria);
+        right: 0;
+        width: 50px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius:5px ;
+    }
+    /* Fazer o restante do JS (2ª e 3ª funções) */
 }
