@@ -198,7 +198,7 @@
     .sociais li a:hover{
       /*color: "#'333*/
       color: var(--corSecundaria);
-      filter: invert(0);
+      filter: invert(1);
     }
 
     .circulo{
@@ -207,13 +207,13 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: var(--corPrimaria);
+      background: #bb6cf3;
 
       /*https://bennettfeely.com/clippy/*/
       /*https://www.w3schools.com/cssref/css_pr_clip-path.php */
 
-      /*clip-path: circle(600px at right 800px);*/
-      clip-path: polygon(49% 71%, 61% 35%, 98% 35%, 67% 56%, 67% 57%, 50% 6%, 32% 58%, 33% 58%, 2% 35%, 39% 35%);
+      clip-path: circle(600px at right 800px);
+      /*clip-path: polygon(49% 71%, 61% 35%, 98% 35%, 67% 56%, 67% 57%, 50% 6%, 32% 58%, 33% 58%, 2% 35%, 39% 35%);*/
     }
 
     /*https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp*/
@@ -223,7 +223,7 @@
     /*Large devices 992px and up*/
     /*Extra large devices1200px and up*/
 
-    /*@media (max-width: 992px) {
+    @media (max-width: 992px) {
       header {
         padding: 20px;
       }
@@ -241,13 +241,24 @@
         width: 30px;
         height: 30px;
         cursor: pointer;
+        background: url(assets/menu.png);
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        z-index: 11;
+      }
+
+      .toggle.active{
+        position: fixed;
+        right: 20px;
         background: url(assets/close.png);
         background-size: 25px;
         background-position: center;
         background-repeat: no-repeat;
       }
-
-      header ul.links.active{
+        
+      header ul.links.active {
         position: fixed;
         top: 0;
         left: 0;
@@ -257,7 +268,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background-color: var(--corTerciaria);
+        background-color: #f2f2f2;
         z-index: 10;
       }
 
@@ -266,17 +277,17 @@
           margin: 5px 0;
         }
       
-    }
+    
 
 
     main{
       padding: 20px 20px 120px;
     }
 
-    .conteudo{
+   .conteudo{
       flex-direction: column;
       margin-top: 100px;
-    }
+    } 
 
     .conteudo.textoPrincipal h2{
       font-size: 2.5em;
@@ -305,4 +316,5 @@
       width: 50px;
       border-top-left-radius: 5px;
       border-bottom-left-radius: 5px;
-    }*/
+    }
+  }
